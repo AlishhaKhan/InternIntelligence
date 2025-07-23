@@ -1,7 +1,7 @@
 import asyncio
-from app.scraper import scrape_page
-from app.agent import summarize_text
-from app.api import app
+from myapp.scraper import scrape_page
+from myapp.agent import summarize_text
+from myapp.api import app
 
 async def run_scraper_agent(url):
     titles = await scrape_page(url)
@@ -10,5 +10,5 @@ async def run_scraper_agent(url):
     print("SUMMARY:\n", summary)
 
 if __name__ == "__main__":
-    url = "https://example.com"
+    url = "https://realpython.com/tutorials/web-dev/"  # 👈 Replace with any valid URL
     asyncio.run(run_scraper_agent(url))

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from app.scraper import scrape_page
-from app.agent import summarize_text
+from myapp.scraper import scrape_page
+from myapp.agent import summarize_text
 import asyncio
 
 app = FastAPI()
